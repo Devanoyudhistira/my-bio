@@ -40,16 +40,17 @@ tailwind.config = {
         'oke':['14.5px']
       },
       animation:{
-        fadein:'fadein 500ms'
+        fadein:'fadein 500ms',
+        gelap:'gelap 250ms'
       },
       keyframes :{
         fadein: {
-          '0%':{transform:'scalex(0)'},
-          '100%':{transform:'scalex(1)'},
+          '0%':{opacity:'0'},
+          '100%':{opacity:'1'},
         }
       },
     fontFamily: {
-    'inter':['Inter'],
+      'inter':['Inter'],
       'robot':['Roboto+Mono'],
       'merry':['Merriweather'],
     }
@@ -65,8 +66,10 @@ tailwind.config = {
     >Devano yudhistira</h1>
 
     <!-- tombol darkmode -->
-    <input type="checkbox" class=" modegelap absolute z-50 w-16 h-6 checked: ">
-    <div class="  z-20 absolute w-14 h-6 bg-neutral-500 rounded-full"></div>
+    <input type="checkbox" class=" modegelap transition-all duration-200 absolute z-50 w-16 h-6 opacity-0 ">
+    <div class="transition-all duration-200 z-20 absolute w-14 h-6 bg-neutral-500 rounded-full p-2 overflow-hidden">
+      <div class="w-6 h-6 bola bg-neutral-200 rounded-full transition-all duration-200 top-0 absolute left-0"></div>
+    </div>
 
 
   <p class="absolute z-50 mt-20 ml-36 
@@ -93,16 +96,16 @@ tailwind.config = {
       to-blue-500 rounded-lg shadow-blue-800 stats
       text-oke -ml-[7px]
       dark:focus:bg-gradient-to-br from-blue-900 
-      to-blue-700" onclick='control(0)'>social</button> 
+      to-blue-700" onclick='control(0)'>About</button> 
     
     <button class="p-1 h-max font-inter shadow-md
       border-solid border-2 border-blue-500 font-bold 
       text-indigo-200 duration-300 focus:text-blue-800 rounded-xl
-     focus:bg-gradient-to-br from-sky-600 
-      to-blue-500 rounded-lg shadow-blue-800 stats
+     focus:bg-gradient-to-tr from-sky-800/20 
+      to-sky-700/30 rounded-lg shadow-blue-800 stats
       text-oke
-      dark:focus:bg-gradient-to-br from-blue-900 
-      to-blue-700" onclick="control(1)">address</button> 
+      dark:focus:bg-gradient-to-br dark:from-sky-600 
+      dark:to-blue-600 dark:focus:text-blue-800" onclick="control(1)">Address</button> 
     
     <button class="p-1 h-max font-inter shadow-md
       border-solid border-2 border-blue-500 font-bold 
@@ -110,7 +113,7 @@ tailwind.config = {
       rounded-xl focus:bg-gradient-to-br from-sky-600 
       to-blue-500 rounded-lg shadow-blue-800 stats
       text-oke dark:focus:bg-gradient-to-br from-blue-900 
-      to-blue-700" onclick='control(2)'>education</button>
+      to-blue-700" onclick='control(2)'>Education</button>
     
     <button class="p-1 h-max font-inter shadow-md
       border-solid border-2 border-blue-500 font-bold 
@@ -118,7 +121,7 @@ tailwind.config = {
       rounded-xl focus:bg-gradient-to-br from-sky-600 
       to-blue-500 rounded-lg shadow-blue-800 stats text-oke
       dark:focus:bg-gradient-to-br from-blue-900 
-      to-blue-700" onclick='control(3)'>strength</button> 
+      to-blue-700" onclick='control(3)'>Strength</button> 
   </div>
   
   <div class="w-[95vw] mx-auto mb-2 h-[500px] bg-gradient-to-tr from-blue-500
@@ -126,25 +129,33 @@ tailwind.config = {
     border-2 flex place-items-center justify-center gap-4
     dark:bg-gradient-to-tr dark:from-blue-900
     dark:to-blue-800">
-   <div class="w-[96%] h-[96%] bg-neutral-200/30 flex dark:bg-blue-600/30 backdrop-blur-sm bio animate-fadein rounded-2xl overflow-hidden">
-     <h1 class="text-2xl ml-[26%] font-inter font-bold mt-2">Social Media</h1>
-     <div class="w-[92%] h-[90px] flex content-end overflow-hidden rounded-full bg-neutral-200/30 backdrop-blur-sm mx-auto mt-[15px] ">
-       <div class="w-[70px] h-[70px] bg-black mt-2 ml-1 rounded-full">
-         <span class=" block ml-[80px] mt-[18px] font-inter text-3xl text-blue-700 transition-all font-semibold">Facebook</span></div>
+     <div class=" w-[96%] h-[96%] bg-neutral-200/30 dark:bg-blue-600/30 backdrop-blur-sm bio animate-fadein 
+       rounded-2xl overflow-hidden relative">
+       <h1 class="text-[70px] font-inter tracking-wider font-semibold text-slate-800 ml-[55px] dark:text-stone-300 mb-[28px]">social</h1>
+       <div class="absolute text-neutral-200 text-sm tracking-wider top-[92px] left-[70px] flex justify-center font-inter inline-block bg-neutral-900 dark:bg-neutral-200 dark:text-black rounded-md">"contact me anywhere"</div>
        
+       <div class="w-[90%] h-[50px] bg-black mb-7 rounded-tr-xl rounded-br-xl flex justify-between items-center p-[1em] ">
+         <a href=" https://github.com/Devanoyudhistira" class="text-white tracking-widest">devanoyudhistira</a>
+         <img src="img/github-mark-white.png" class="w-10 h-10 object-cover">
+       </div>
+       <div class="w-[90%] h-[50px] bg-blue-700 mb-7 rounded-tr-xl rounded-br-xl flex justify-between items-center p-[1em] ">
+         <a href=" https://www.facebook.com/devano.yudhistira.1?mibextid=98BtzZNkros8nYVe" class="text-white tracking-widest">devano Yudhistira</a>
+         <img src="img/fb.png" class="w-10 h-10 object-cover">
+       </div>
+       <div class="w-[90%] h-[50px] bg-red-700 mb-7 rounded-tr-xl rounded-br-xl flex justify-between items-center p-[1em]  ">
+         <a href=" https://github.com/Devanoyudhistira" class="text-white tracking-widest">devanoyudhistira</a>
+         <img src="img/gmail.png" class="w-12 h-12 object-cover">
+       </div>
+       <div class="w-[90%] h-[50px] bg-rose-700 mb-7 rounded-tr-xl rounded-br-xl flex justify-between items-center p-[1em]">
+         <a href=" https://www.instagram.com/yudhistiradevano?igsh=MTV1dTdwZjF0eTEzMA==" class="text-white tracking-widest">yudhistiradevano</a>
+         <img src="img/ig.png" class="w-12 h-12 object-cover">
+       </div>
      </div>
-     <div class="w-[92%] h-[90px] flex rounded-full bg-neutral-200/30 backdrop-blur-sm mx-auto mt-[15px] ">
-       <div class="w-[70px] h-[70px] bg-black mt-2 ml-1 rounded-full">
-         <span class=" inline-block ml-[80px] mt-[18px] font-inter text-3xl bg-gradient-to-r from-pink-600 to-red-400 bg-clip-text text-transparent transition-all font-semibold">Instagram</span></div>      
-     </div>
-     <div class="w-[92%] h-[90px] flex rounded-full bg-neutral-200/30 backdrop-blur-sm mx-auto mt-[15px] ">
-       <div class="w-[70px] h-[70px] bg-black mt-2 ml-1 rounded-full">
-         <span class=" block ml-[80px] mt-[18px] font-inter text-3xl text-green-600 transition-all font-semibold">WhatsApp</span></div>     
-     </div>
-   </div>
-   <div class="w-[94%] h-[93%] bg-neutral-200/30 overflow-hidden dark:bg-blue-600/30 backdrop-blur-sm bio animate-fadein rounded-2xl flex">
-     <div class=" m-auto w-[98%] h-[40%] bg-[url('img/rumah.jpg')] bg-cover"></div>
-     <div class=" mx-auto mt-2 w-[95%] h-[250px] bg-blue-300/20 backdrop-blur-lg rounded-br-full">
+
+
+   <div class="w-[94%] h-[93%] bg-neutral-200/30 overflow-hidden dark:bg-blue-600/30 p-2 backdrop-blur-sm bio animate-fadein origin-top-left rounded-2xl flex">
+     <div class=" m-auto w-[98%] h-[40%] bg-[url('img/rumah.jpg')] bg-cover mt-2"></div>
+     <div class=" mx-auto mt-2 w-[100%] h-[250px] bg-blue-300/20 backdrop-blur-lg rounded-br-full">
        <ul class="font-inter font-semibold text-lg mt-2 ml-1 flex flex-col justify-center">
          <li>provinsi:Jawa Timur</li>
          <li>Kota:magetan</li>
@@ -167,9 +178,9 @@ tailwind.config = {
    const bio = document.querySelectorAll('.bio');
    const input = document.querySelector('.modegelap')
    const html = document.querySelector('html');
-
+   const bola = document.querySelector('.bola');
   
-   let index = 2
+   let index = 0
   
    
    function slide(n){
@@ -186,10 +197,16 @@ tailwind.config = {
    
    input.addEventListener('click',function()
    {
-    input.checked ? html.classList.add('dark') : html.classList.remove('dark');
+    input.checked ? html.classList.add('dark'): html.classList.remove('dark');
+     
    })
-
-
+   input.addEventListener('click',function()
+  {
+    input.checked ? bola.classList.add('right-0') || bola.classList.remove('left-0')||bola.classList.add('bg-neutral-800')||bola.classList.remove('bg-neutral-200')
+    : bola.classList.remove('right-0') || bola.classList.add('left-0')||bola.classList.remove('bg-neutral-800') ||bola.classList.add('bg-neutral-200');
+   
+  }
+  )
   
   </script>
 </body>
