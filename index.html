@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width =768px, initial-scale=1" />
   <link rel="stylesheet" href="styles/style.css"/>
   <title>Hello, World!</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,8 @@ tailwind.config = {
   theme: {
     extend:{
       fontSize:{
-        'oke':['14.5px']
+        'oke':['14.5px'],
+        'oke2':['17px']
       },
       animation:{
        'fadein':'fadein 500ms',
@@ -42,8 +43,8 @@ tailwind.config = {
     '100%': { opacity: '1' },
   },
   panjang: {
-    '0%': { transform: 'scalex(0)' },
-    '100%': { transform: 'scalex(1)' },
+    '0%': { transform: 'translatex(-100%)' },
+    '100%': { transform: 'translatex(0)' },
   }
 },
 
@@ -59,10 +60,10 @@ tailwind.config = {
 }
   </script>
 </head>
-<body class="bg-blue-500 dark:bg-blue-950 overflow-x-hidden">
+<body class="bg-blue-500 dark:bg-blue-950 overflow-x-hidden lg:bg-black">
   <h1 class="text-blue-700 text-3xl 
-    absolute z-20 text-inter ml-[13vw]
-    mt-10 font-inter font-semibold "
+    absolute z-20 text-inter ml-[13vw] md:ml-[20vw]
+    mt-10 font-inter font-semibold sm:text-5xl md:text-6xl "
     >Devano yudhistira</h1>
 
     <!-- tombol darkmode -->
@@ -73,113 +74,115 @@ tailwind.config = {
 
 
   <p class="absolute z-50 mt-20 ml-36 
-    text-sky-500 text-2xl font-inter font-semibold ml-[35vw] ">Biodata</p>
+    text-sky-500 text-2xl font-inter font-semibold ml-[35vw] sm:mt-[90px] md:mt-[120px] sm:text-4xl md:text-5xl ">Biodata</p>
  <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(45, 200, 162, 0)" offset="0%"></stop><stop stop-color="rgba(4.827, 0, 174.459, 0)" offset="0%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,294L30,245C60,196,120,98,180,122.5C240,147,300,294,360,367.5C420,441,480,441,540,392C600,343,660,245,720,212.3C780,180,840,212,900,187.8C960,163,1020,82,1080,65.3C1140,49,1200,98,1260,155.2C1320,212,1380,278,1440,253.2C1500,229,1560,114,1620,81.7C1680,49,1740,98,1800,155.2C1860,212,1920,278,1980,294C2040,310,2100,278,2160,228.7C2220,180,2280,114,2340,106.2C2400,98,2460,147,2520,171.5C2580,196,2640,196,2700,204.2C2760,212,2820,229,2880,220.5C2940,212,3000,180,3060,212.3C3120,245,3180,343,3240,367.5C3300,392,3360,343,3420,302.2C3480,261,3540,229,3600,179.7C3660,131,3720,65,3780,98C3840,131,3900,261,3960,318.5C4020,376,4080,359,4140,310.3C4200,261,4260,180,4290,138.8L4320,98L4320,490L4290,490C4260,490,4200,490,4140,490C4080,490,4020,490,3960,490C3900,490,3840,490,3780,490C3720,490,3660,490,3600,490C3540,490,3480,490,3420,490C3360,490,3300,490,3240,490C3180,490,3120,490,3060,490C3000,490,2940,490,2880,490C2820,490,2760,490,2700,490C2640,490,2580,490,2520,490C2460,490,2400,490,2340,490C2280,490,2220,490,2160,490C2100,490,2040,490,1980,490C1920,490,1860,490,1800,490C1740,490,1680,490,1620,490C1560,490,1500,490,1440,490C1380,490,1320,490,1260,490C1200,490,1140,490,1080,490C1020,490,960,490,900,490C840,490,780,490,720,490C660,490,600,490,540,490C480,490,420,490,360,490C300,490,240,490,180,490C120,490,60,490,30,490L0,490Z"></path></svg>
-  <div class="w-44 h-44 bg-sky-400 m-auto rounded-full md:w-[1000px]
-    dark:bg-blue-800 bg-[url('img/deva.jpg')] bg-contain bg-center">
-    <div class=" absolute
-      w-16 h-16 bg-sky-600 m-32 rounded-full
-      dark:bg-cyan-700">
-  </div>
-    <div class=" absolute
-      w-16 h-16 bg-blue-600 m-auto rounded-full
-      dark:bg-teal-700">
-  </div>
+  <div class="w-44 h-44 sm:w-80 sm:h-80 md:max-w-[500px] md:h-[500px] sm:-mt-12 md:-mt-30 bg-sky-400 mx-auto rounded-full md:w-[1000px]
+    dark:bg-blue-800 bg-[url('img/ppkoran.jpg')] bg-no-repeat bg-cover bg-center ">
   </div>
   <br>
   <div class="w-screen h-20 flex flex-row justify-evenly">
-    <button class="p-1 h-max font-inter shadow-md
-      border-solid border-2 border-blue-500 font-bold 
+    <button class="p-1 sm:p-2 sm:px-4 h-max font-inter shadow-md
+      border-solid border-2 border-blue-500  font-inter font-bold 
       text-indigo-200 duration-300 focus:text-blue-800 rounded-xl
      focus:bg-gradient-to-tr from-sky-800/20 
       to-sky-700/30 rounded-lg shadow-blue-800 stats
-      text-oke
+      text-oke sm:text-oke2
       dark:focus:bg-gradient-to-br dark:from-sky-600 
-      dark:to-blue-600 dark:focus:text-blue-800" onclick='control(0)'>About</button> 
+      dark:to-blue-600 dark:focus:text-blue-800" onclick='control(0)'>Social</button> 
     
-    <button class="p-1 h-max font-inter shadow-md
-      border-solid border-2 border-blue-500 font-bold 
+    <button class="p-1 sm:p-2 h-max font-inter shadow-md
+      border-solid border-2 border-blue-500 font-inter font-bold 
       text-indigo-200 duration-300 focus:text-blue-800 rounded-xl
      focus:bg-gradient-to-tr from-sky-800/20 
       to-sky-700/30 rounded-lg shadow-blue-800 stats
-      text-oke
+      text-oke sm:text-oke2
       dark:focus:bg-gradient-to-br dark:from-sky-600 
       dark:to-blue-600 dark:focus:text-blue-800" onclick="control(1)">Address</button> 
     
-    <button class="p-1 h-max font-inter shadow-md
-      border-solid border-2 border-blue-500 font-bold 
+    <button class="p-1 sm:p-2 h-max font-inter shadow-md
+      border-solid border-2 border-blue-500 font-inter font-bold 
       text-indigo-200 duration-300 focus:text-blue-800 rounded-xl
      focus:bg-gradient-to-tr from-sky-800/20 
       to-sky-700/30 rounded-lg shadow-blue-800 stats
-      text-oke
-      dark:focus:bg-gradient-to-br dark:from-sky-600 
+      text-oke sm:text-oke2
+      dark:focus:bg-gradient-to-br font-inter dark:from-sky-600 
       dark:to-blue-600 dark:focus:text-blue-800" onclick='control(2)'>Education</button>
     
-    <button class="p-1 h-max font-inter shadow-md
+    <button class="p-1 sm:p-2 sm:px-4 h-max font-inter shadow-md
       border-solid border-2 border-blue-500 font-bold 
       text-indigo-200 duration-300 focus:text-blue-800 rounded-xl
      focus:bg-gradient-to-tr from-sky-800/20 
       to-sky-700/30 rounded-lg shadow-blue-800 stats
-      text-oke
+      text-oke sm:text-oke2
       dark:focus:bg-gradient-to-br dark:from-sky-600 
-      dark:to-blue-600 dark:focus:text-blue-800" onclick='control(3)'>about</button> 
+      dark:to-blue-600 dark:focus:text-blue-800" onclick='control(3)'>About</button> 
   </div>
   
-  <div class="w-[95vw] mx-auto mb-2 h-[500px] bg-gradient-to-tr from-blue-500
+  <div class="w-[95vw] mx-auto mb-2 sm:h-[700px] h-[500px] bg-gradient-to-tr from-blue-500
     to-blue-400 from-5% rounded-3xl -mt-[15px] border-blue-700 border-solid
     border-2 flex place-items-center justify-center gap-4
     dark:bg-gradient-to-tr dark:from-blue-900
     dark:to-blue-800">
      <div class=" w-[96%] h-[96%] bg-neutral-200/30 dark:bg-blue-600/30 backdrop-blur-sm bio animate-fadein 
        rounded-2xl overflow-hidden relative">
-       <h1 class="text-[70px] font-inter tracking-wider font-semibold text-slate-800 ml-[55px] dark:text-stone-300 mb-[28px]">social</h1>
-       <div class="absolute text-neutral-200 text-sm tracking-wider top-[92px] left-[70px] flex justify-center font-inter inline-block bg-neutral-900 dark:bg-neutral-200 dark:text-black rounded-md">"contact me anywhere"</div>
        
-       <div class="w-[90%] h-[50px] bg-black mb-7 rounded-tr-xl rounded-br-xl overflow-hidden flex justify-between items-center p-[1em] animate-panjang origin-[-100%]">
-         <a href=" https://github.com/Devanoyudhistira" class="text-white tracking-widest">devanoyudhistira</a>
-         <img src="img/github-mark-white.png" class="w-10 h-10 object-cover">
+       <div class="md:flex justify-evenly grow gap-10 mt-10">
+       
+       <div class="md:flex flex-row md:h-[600px] items-center justify-start ">
+       <h1 class="text-[70px] md:text-[70px] md:-ml-[3px] sm:text-[90px] font-inter tracking-wider font-semibold text-slate-800 ml-[55px] sm:-mt-6 dark:text-stone-300 sm:mb-[25px] mb-[28px]">social</h1>
+       <div class=" absolute text-neutral-200 text-sm sm:text-xl tracking-wider top-[150px] md:top-[350px] left-[70px] md:left-[20px] flex justify-center font-inter inline-block bg-neutral-900 dark:bg-neutral-200 dark:text-black rounded-md">"contact me anywhere"</div>
        </div>
-       <div class="w-[90%] h-[50px] bg-blue-700 mb-7 rounded-tr-xl rounded-br-xl flex justify-between items-center p-[1em] animate-panjang origin-[-100%] ">
-         <a href=" https://www.facebook.com/devano.yudhistira.1?mibextid=98BtzZNkros8nYVe" class="text-white tracking-widest">devano Yudhistira</a>
-         <img src="img/fb.png" class="w-10 h-10 object-cover">
+       
+       
+       <div class="sm:flex sm:flex-col gap-10 h-[600px] md:justify-between">
+       <div class="w-[90%] md:w-full h-[50px] bg-black mb-7 rounded-tr-xl rounded-br-xl overflow-hidden flex justify-between items-center p-[1em] sm:py-[2em] animate-panjang origin-[-100%]">
+         <a href=" https://github.com/Devanoyudhistira" class="text-white sm:text-2xl tracking-widest" target="blank">devanoyudhistira</a>
+         <img src="img/github-mark-white.png" class="w-10 h-10 sm:w-14 sm:h-14 object-cover">
        </div>
-       <div class="w-[90%] h-[50px] bg-red-700 mb-7 rounded-tr-xl rounded-br-xl flex justify-between items-center p-[1em] animate-panjang origin-[-100%]  ">
-         <a href=" https://github.com/Devanoyudhistira" class="text-white tracking-widest">devanoyudhistira</a>
-         <img src="img/gmail.png" class="w-12 h-12 object-cover">
+       <div class="w-[90%] md:w-full h-[50px] bg-blue-700 mb-7 rounded-tr-xl rounded-br-xl flex justify-between items-center p-[1em] sm:py-[2em] md:gap-2 animate-panjang origin-[-100%] ">
+         <a href=" https://www.facebook.com/devano.yudhistira.1?mibextid=98BtzZNkros8nYVe" class="text-white sm:text-2xl tracking-widest">devano Yudhistira</a>
+         <img src="img/fb.png" class="w-10 h-10 sm:w-14 sm:h-14 object-cover">
        </div>
-       <div class="w-[90%] h-[50px] bg-rose-700 mb-7 rounded-tr-xl rounded-br-xl flex justify-between items-center p-[1em] animate-panjang origin-[-100%] ">
-         <a href=" https://www.instagram.com/yudhistiradevano?igsh=MTV1dTdwZjF0eTEzMA==" class="text-white tracking-widest">yudhistiradevano</a>
-         <img src="img/ig.png" class="w-12 h-12 object-cover">
+       <div class="w-[90%] md:w-full h-[50px] bg-red-700 mb-7 rounded-tr-xl rounded-br-xl flex justify-between items-center p-[1em] sm:py-[2em] animate-panjang origin-[-100%]  ">
+         <a href=" https://github.com/Devanoyudhistira" class="text-white tracking-widest sm:text-2xl">devanoyudhistira</a>
+         <img src="img/gmail.png" class="w-12 h-12 sm:w-20 sm:h-20 -mr-2 object-cover">
        </div>
+       <div class="w-[90%] md:w-full h-[50px] bg-rose-700 mb-7 rounded-tr-xl rounded-br-xl flex justify-between items-center p-[1em] sm:py-[2.3em] animate-panjang origin-[-100%] ">
+         <a href=" https://www.instagram.com/yudhistiradevano?igsh=MTV1dTdwZjF0eTEzMA==" class="text-white tracking-widest sm:text-2xl">yudhistiradevano</a>
+         <img src="img/ig.png" class="w-12 h-12 sm:w-20 sm:h-20 -mr-2 object-cover">
+       </div>
+         </div>
      </div>
-
+    </div>
 
    <div class="w-[94%] h-[93%] bg-neutral-200/30 overflow-hidden dark:bg-blue-600/30 p-2 backdrop-blur-sm bio animate-fadein origin-top-left rounded-2xl flex">
-     <div class=" m-auto w-[98%] h-[40%] bg-[url('img/rumah.jpg')] bg-cover mt-2"></div>
-     <div class=" mx-auto mt-2 w-[100%] h-[250px] bg-blue-300/20 backdrop-blur-lg rounded-br-full">
-       <ul class="font-inter font-semibold text-lg mt-2 ml-1 flex flex-col justify-center">
-         <li>provinsi:Jawa Timur</li>
-         <li>Kota:magetan</li>
-         <li>Desa:Tambran</li>
-         <li>Jalan:Pandu</li>
-       </ul>
-     </div>
-   </div>
-   <div class="w-[94%] h-[93%] bg-neutral-200/30 dark:bg-blue-600/30 backdrop-blur-sm bio animate-fadein rounded-2xl overflow-hidden">
-     <div class="sekolah w-[97%] mt-2 mx-auto h-[200px] bg-black rounded-xl "></div>
-     <div class="w-[90%] pb-2 h-auto bg-sky-300/10 backdrop-blur-sm mt-2 ml-2 rounded-xl">
-       <h1 class="ml-1 font-inter text-center font-semibold">SMKN 2 MAGETAN</h1>
-       <p class="ml-2 font-inter dark:text-neutral-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar aliquam orci sed sollicitudin. Nulla facilisi. Cras sit amet arcu in urna dignissim posuere. Morbi viverra eros tellus.
-         Integer ultrices ipsum sem, eu feugia liquam pulvinar a nec arcu. Morbi eget eros auctor, lacinia lectus
+     <div class=" m-auto w-[98%] h-[40%] sm:h-[60%] bg-[url('img/rumah.jpg')] bg-cover mt-2"></div>
+     <div class=" mx-auto mt-2 w-[100%] h-auto p-1 bg-blue-300/20 backdrop-blur-lg rounded-xl ">
+       <p class="font-inter font-semibold text-md mt-2 ml-1 flex flex-col justify-center">
+         my home is in magetan city east java from indonesia 
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar
+         aliquam orci sed sollicitudin. Nulla facilisi. Cras sit amet arcu in urna dignissim posuers.
+         <span class="hidden sm:block">pulvinar aliquam orci sed sollicitudin. Nulla facilisi. Cras sit amet arcu in urna dignissim posuere. Morbi viverra eros tellus. Cras commodo at metus nec scelerisque. Morbi a gravida nisi. Mauris suscipit fermentum nulla vitae tempor.</span>
        </p>
      </div>
    </div>
+   <div class="w-[94%] h-[93%] bg-neutral-200/30 dark:bg-blue-600/30 backdrop-blur-sm bio animate-fadein rounded-2xl overflow-hidden">
+     <div class="sekolah w-[97%] mt-2 mx-auto sm:h-[300px] h-[200px] bg-black rounded-xl "></div>
+     <div class="w-[98%] font-inter pb-2 h-auto bg-sky-300/10 backdrop-blur-sm mt-2 ml-2 rounded-xl">
+       <h1 class="ml-1 font-inter text-center font-semibold">SMKN 2 MAGETAN</h1>
+       <p class="ml-2 dark:text-neutral-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar aliquam orci sed sollicitudin. Nulla facilisi. Cras sit amet arcu in urna dignissim posuere. Morbi viverra eros tellus.
+         Integer ultrices ipsum sem, eu feugia liquam pulvinar a nec arcu. Morbi eget eros auctor, lacinia  <span class="hidden sm:block">Integer ultrices ipsum sem, eu feugiat ipsum consequat nec. Aliquam varius erat eget 
+           nisl porttitor, et rutrum nunc consectetur. Aliquam nec enim molestie quam aliquam 
+           pulvinar a nec arcu. Morbi eget eros auctor, lacinia lectus eu, tincidunt mauris. Morbi a maximus
+          </span></p>
+     </div>
+   </div>
    <div class="w-[94%] h-[93%] bg-neutral-200/30 dark:bg-blue-600/30 backdrop-blur-sm bio animate-fadein rounded-2xl">
-     <div class=" m-auto mt-[20px] w-32 h-32 rounded-full bg-[url('img/deva.jpg')] bg-contain bg-center"></div>
-     <div class="indent-2 m-auto mt-2 w-[97%] h-auto text-left font-inter text-center dark:text-neutral-300 text-sm align-center p-2 ">
-       <p> devano yudhistira is a beginner young frontend web devoleper,and right now im use the tailwind css framework to styling this portfolio 
-         website
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar aliquam orci sed sollicitudin. Nulla facilisi. Cras sit amet arcu in urna dignissim posuere. Morbi viverra eros t
+     <div class=" m-auto mt-[20px] w-32 h-32  sm:w-60 sm:h-60 rounded-full bg-[url('img/deva.jpg')] bg-no-repeat bg-cover bg-center"></div>
+     <div class="indent-2 m-auto mt-2 w-[97%] h-auto text-left font-inter text-center sm:text-left dark:text-neutral-300 text-sm sm:text-xl align-center p-2 ">
+       <h1 class="sm:text-5xl text-3xl -mt-4 font-inter font-bold sm:mb-4">About me</h1>
+       <p class="font-inter"> i am a beginner young frontend web devoleper,and right now im use the tailwind css framework to styling this portfolio 
+         website || Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar aliquam orci sed sollicitudin. Nulla facilisi. Cras sit amet arcu in urna dignissim posuere. Morbi viverra eros t0
          Mauris suscipit fermentum nulla vitae tempor.
          Integer ultrices ipsum semellus. 
         </p>
@@ -192,7 +195,7 @@ tailwind.config = {
    const html = document.querySelector('html');
    const bola = document.querySelector('.bola');
   
-   let index = 3
+   let index = 0
   
    
    function slide(n){
